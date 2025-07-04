@@ -481,7 +481,7 @@ magnetic field.
 		  auxvalue="(500.0 V/cm, 1.0 V/m, 500.0 V/cm)"/>
       <auxiliary auxtype="BField
 		  " auxvalue="(2.0 tesla, 3.0 T, 1.0 G)"/>
-      <auxiliary auxtype="StepLimit" auxValue="1.0 cm"/>
+      <auxiliary auxtype="StepLimit" auxvalue="1.0 cm"/>
     </volume>
 ```
 
