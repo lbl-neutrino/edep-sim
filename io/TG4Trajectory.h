@@ -12,6 +12,11 @@ namespace EDepSim {class PersistencyManager;}
 class TG4Trajectory;
 class TG4TrajectoryPoint;
 
+// The public fields are deprecated but still supported by default in the
+// current version.
+#define EDEPSIM_USE_PUBLIC_FIELDS
+    
+
 /// A container for all of the trajectory information.  The trajectory
 /// container is indexed by the trajectory TrackId so that
 /// (container[index].TrackId==index).  That means that you can access the
@@ -156,10 +161,6 @@ public:
     /// The trajectory points for this trajectory.
     TrajectoryPoints Points;
 
-// The public fields are deprecated but still supported by default in the
-// current version.
-#define EDEPSIM_USE_PUBLIC_FIELDS
-    
 #if defined(EDEPSIM_USE_PUBLIC_FIELDS)&&!defined(EDEPSIM_FORCE_PRIVATE_FIELDS)&&!defined(__CINT__)
 public:
 #ifdef EDEPSIM_WARN_PUBLIC_FIELDS

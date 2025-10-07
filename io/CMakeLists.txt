@@ -23,8 +23,9 @@ set(includes
   TG4HitSegment.h
   TG4Event.h)
 
-# Compile the base library with private I/O fields.
-add_definitions(-DEDEPSIM_FORCE_PRIVATE_FIELDS)
+if(EDEPSIM_FORCE_PRIVATE_FIELDS)
+    add_definitions(-DEDEPSIM_FORCE_PRIVATE_FIELDS)
+endif()
 
 # Make sure the current directories are available for the later
 # compilation.  This is required to make ROOT_GENERATE_DICTIONARY
